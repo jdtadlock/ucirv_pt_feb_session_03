@@ -1,0 +1,152 @@
+/* Resets */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Global Classes */
+
+.row, .column {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.split {
+  justify-content: space-between;
+}
+
+.y-center {
+  align-items: center;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+/* Animations */
+@keyframes slide-in {
+  from {
+    transform: translateX(400px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+
+
+/* Custom Styles */
+
+/* #some-div {
+  background: red;
+} */
+
+header {
+  padding: 9px 5%;
+}
+
+.logo-one {
+  color: rgb(160, 0, 0);
+  font-weight: 300;
+}
+
+.logo-two {
+  font-weight: 400;
+}
+
+.logo-sub-text {
+  text-transform: uppercase;
+  font-size: .7rem;
+  color: rgb(160, 0, 0);
+}
+
+
+/* Main Content */
+
+main {
+  display: grid;
+  grid-template-columns: repeat(5, 19.77%);
+  grid-column: 3 / span 2;
+  grid-template-rows: repeat(3, 220px);
+  grid-gap: 5px;
+  padding: 25px 5%;
+}
+
+main .project {
+  opacity: 0;
+}
+
+.bio {
+  background-image: linear-gradient(to right, transparent 60%, rgba(167, 147, 133, 0.8), #A89587), url(https://picsum.photos/800/600?image=1062);
+  background-size: cover;
+  background-position: center;
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  padding-right: 5%;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.bio span, .bio p, .bio a {
+  transform: translateX(400px);
+}
+
+.bio span {
+  text-transform: uppercase;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.bio span:nth-child(1) {
+  animation: slide-in .8s .5s forwards;
+}
+
+.bio span:nth-child(2) {
+  animation: slide-in .8s .8s forwards;
+}
+
+.bio span:nth-child(3) {
+  animation: slide-in .8s 1s forwards;
+}
+
+.bio p {
+  font-weight: 300;
+  font-family: 'Times', sans-serif;
+  font-style: italic;
+  margin: 10px 0 15px;
+  color: #eee;
+  animation: slide-in .8s 1.2s forwards;
+}
+
+.bio a {
+  color: #fff;
+  background: #c90000;
+  padding: 9px 18px 10px;
+  align-self: flex-start;
+  font-size: .8rem;
+  animation: slide-in .8s 1.4s forwards;
+}
+
+.project {
+  background-size: cover;
+  background-position: center;
+}
